@@ -16,7 +16,7 @@
 </div>
 
 <p align="center">
-  <img src="./assets/llama.png" height="30%" width="30%"/>
+  <img src="./assets/llama.png" height="70%" width="70%"/>
 </p>
 
 This repository contains implementation of Llama 3 that is introduced in the paper [The Llama 3 Herd of Models](https://arxiv.org/abs/2407.21783) using PyTorch. You can access the weights from [Meta website here](https://www.llama.com/llama-downloads/). I took [Meta's official implementation](https://github.com/meta-llama/llama3) as the base of this project.
