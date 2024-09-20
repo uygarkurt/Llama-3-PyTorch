@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/llama-from-scratch" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/llama3" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/torchtune" vcs="Git" />
