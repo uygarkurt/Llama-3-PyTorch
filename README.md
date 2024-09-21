@@ -78,7 +78,7 @@ class RMSNorm(torch.nn.Module):
         return out * self.weight # (2, 8, DIM) Values stays the same. We make the tensor grad_fn.
 ```
 
-### Rotrary Embedding <a class="anchor" id="rope"></a>
+### RoPE (Rotrary Positional Embeddings) <a class="anchor" id="rope"></a>
 
 ```
 def precompute_freqs_cis(dim, end, theta = 10000.0):
@@ -121,7 +121,7 @@ class FeedForward(nn.Module):
         return self.w2(F.silu(self.w1(x)) * self.w3(x)) # (2, 8, DIM) = (bsz, seqlen, DIM) - use the SwiGLU activation function (llama3) Table 3.
 ```
 
-### Attention <a class="anchor" id="attn"></a>
+### Grouped Query Attention (GQA) With KV Cache <a class="anchor" id="attn"></a>
 ```
 # GQA With Cache
 class Attention(nn.Module):
@@ -211,7 +211,7 @@ class TransformerBlock(nn.Module):
         return out # (2, 8, DIM) = (bsz, seqlen, DIM)
 ```
 
-### Transformer<a class="anchor" id="transformer"></a>
+### Transformer (Llama Model)<a class="anchor" id="transformer"></a>
 ```
 class Transformer(nn.Module):
     def __init__(self):
